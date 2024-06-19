@@ -14,6 +14,14 @@
 		4A42E1052C1B6EEB0008E1BB /* PassbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42E1042C1B6EEB0008E1BB /* PassbookTests.swift */; };
 		4A42E10F2C1B6EEB0008E1BB /* PassbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42E10E2C1B6EEB0008E1BB /* PassbookUITests.swift */; };
 		4A42E1112C1B6EEB0008E1BB /* PassbookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42E1102C1B6EEB0008E1BB /* PassbookUITestsLaunchTests.swift */; };
+		4AA238E72C1B906C0000F88D /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA238E62C1B906C0000F88D /* Pass.swift */; };
+		4AA238F22C1FF1FB0000F88D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA238F12C1FF1FB0000F88D /* LoginView.swift */; };
+		4AA238F92C209B8E0000F88D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA238F82C209B8E0000F88D /* HomeView.swift */; };
+		4AA238FB2C209BA20000F88D /* AddPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA238FA2C209BA20000F88D /* AddPassView.swift */; };
+		4AA238FD2C209BB40000F88D /* SharePassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA238FC2C209BB40000F88D /* SharePassView.swift */; };
+		4AA238FF2C209BF30000F88D /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA238FE2C209BF30000F88D /* PassView.swift */; };
+		4AA239012C20AAE60000F88D /* PassCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA239002C20AAE60000F88D /* PassCollectionView.swift */; };
+		4AA239082C2389570000F88D /* PassCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA239072C2389570000F88D /* PassCollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		4A42E10A2C1B6EEB0008E1BB /* PassbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassbookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A42E10E2C1B6EEB0008E1BB /* PassbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookUITests.swift; sourceTree = "<group>"; };
 		4A42E1102C1B6EEB0008E1BB /* PassbookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AA238E62C1B906C0000F88D /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
+		4AA238F12C1FF1FB0000F88D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4AA238F82C209B8E0000F88D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4AA238FA2C209BA20000F88D /* AddPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPassView.swift; sourceTree = "<group>"; };
+		4AA238FC2C209BB40000F88D /* SharePassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePassView.swift; sourceTree = "<group>"; };
+		4AA238FE2C209BF30000F88D /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
+		4AA239002C20AAE60000F88D /* PassCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCollectionView.swift; sourceTree = "<group>"; };
+		4AA239072C2389570000F88D /* PassCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +110,9 @@
 		4A42E0F22C1B6EE90008E1BB /* Passbook */ = {
 			isa = PBXGroup;
 			children = (
+				4AA239022C22261C0000F88D /* Models */,
+				4AA238EE2C1FF1CD0000F88D /* Views */,
+				4AA238EA2C1FF0FD0000F88D /* ViewModels */,
 				4A42E0F32C1B6EE90008E1BB /* PassbookApp.swift */,
 				4A42E0F52C1B6EE90008E1BB /* ContentView.swift */,
 				4A42E0F72C1B6EEB0008E1BB /* Assets.xcassets */,
@@ -125,6 +144,35 @@
 				4A42E1102C1B6EEB0008E1BB /* PassbookUITestsLaunchTests.swift */,
 			);
 			path = PassbookUITests;
+			sourceTree = "<group>";
+		};
+		4AA238EA2C1FF0FD0000F88D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4AA239072C2389570000F88D /* PassCollectionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4AA238EE2C1FF1CD0000F88D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AA238F12C1FF1FB0000F88D /* LoginView.swift */,
+				4AA238F82C209B8E0000F88D /* HomeView.swift */,
+				4AA238FA2C209BA20000F88D /* AddPassView.swift */,
+				4AA238FC2C209BB40000F88D /* SharePassView.swift */,
+				4AA238FE2C209BF30000F88D /* PassView.swift */,
+				4AA239002C20AAE60000F88D /* PassCollectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AA239022C22261C0000F88D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AA238E62C1B906C0000F88D /* Pass.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +306,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A42E0F62C1B6EE90008E1BB /* ContentView.swift in Sources */,
+				4AA238FB2C209BA20000F88D /* AddPassView.swift in Sources */,
+				4AA238E72C1B906C0000F88D /* Pass.swift in Sources */,
+				4AA238FF2C209BF30000F88D /* PassView.swift in Sources */,
+				4AA239012C20AAE60000F88D /* PassCollectionView.swift in Sources */,
+				4AA239082C2389570000F88D /* PassCollectionViewModel.swift in Sources */,
+				4AA238F22C1FF1FB0000F88D /* LoginView.swift in Sources */,
+				4AA238FD2C209BB40000F88D /* SharePassView.swift in Sources */,
+				4AA238F92C209B8E0000F88D /* HomeView.swift in Sources */,
 				4A42E0F42C1B6EE90008E1BB /* PassbookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
