@@ -9,17 +9,17 @@ import SwiftUI
 
 struct AddPassView: View {
     
+    @Binding var isPresented: Bool
+    @ObservedObject var viewModel: PassCollectionViewModel
+    
     @State private var newPassCode: String = ""
     @State private var newPassName: String = ""
+//    @State private var passType: String
     
     var body: some View {
         
-        VStack{
-            
-            Text("New Pass")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .padding()
-            
+        NavigationStack{
+            //TODO add relevant info
             Form {
                 TextField(
                     "Pass name",
@@ -29,14 +29,43 @@ struct AddPassView: View {
                     "Barcode (will change to scan)",
                     text: $newPassCode
                 )
-                Button(action: {}) {Text("Create")}
+                
+//                Section(header: Text("Pass Type")) {
+//                    Picker("Pass Type", selection: $passType) {
+//                        Text("Loyalty Card").tag(/*@START_MENU_TOKEN@*/"Tag"/*@END_MENU_TOKEN@*/)
+//                    }
+//                }
+            
+                HStack{
+                    Spacer()
+                    
+                    Button(action: {
+                        viewModel.createPass(name: newPassName, id: 1, code: newPassCode)
+                        isPresented = false
+                    }) {Text("Create")}
+                        .padding(.horizontal)
+                                    
+                    Spacer()
+          
+                    // Why the fuck does this create a pass??
+                    Button("Cancel", role: .destructive) {
+                        isPresented = false
+                    }
+                    .padding(.horizontal)
+                    
+                    Spacer()
+                }
             }
-            .cornerRadius(4.0)
-            .frame(maxWidth: .infinity)
+ 
+            .navigationBarTitle("Add Pass", displayMode: .large)
         }
+        
     }
 }
 
-#Preview {
-    AddPassView()
+struct AddPassView_Previews: PreviewProvider {
+    @State static var isPresented = true
+    static var previews: some View {
+        AddPassView(isPresented: $isPresented, viewModel: PassCollectionViewModel())
+    }
 }

@@ -9,12 +9,21 @@ import Foundation
 import Combine
 
 class PassCollectionViewModel: ObservableObject{
-    @Published var passes: [Pass] = []
+    @Published private(set) var passes: [Pass] = []
     
     
     func createPass(name: String, id: Int, code: String){
-        let newPass = Pass(title: name, barcode: code)
+        //FIXME fix ID to be unique every time
+        let newPass = Pass(id:id ,title: name, barcode: code)
         passes.append(newPass)
+    }
+    
+    func getPasses() -> [Pass]{
+        return passes
+    }
+    
+    func getPassCount() -> Int {
+        return passes.count
     }
 }
 

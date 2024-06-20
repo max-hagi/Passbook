@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject private var passCollectionViewModel = PassCollectionViewModel()
+    
     var body: some View {
         VStack{
             Text("Passbook").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).padding(.top)
-            HStack{
-                Button(action:{}) {
-                    Label("Add Pass", systemImage: "plus").font(.title2)
-                }
-                .padding([.top, .leading, .trailing])
-    
-            }
+            Spacer()
+            PassCollectionView(viewModel: passCollectionViewModel)
+                .cornerRadius(3)
+            Spacer()
         }
         
-        PassCollectionView()
-            .cornerRadius(3)
+
     }
 }
 

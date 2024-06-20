@@ -9,14 +9,14 @@ import SwiftUI
 
 struct PassView: View {
     
-    @State private var passes: [Pass] = []
+        var pass: Pass
     
     var body: some View {
         VStack(spacing: 0) {
             // Top section with event details
             VStack(alignment: .leading, spacing: 8) {
                 HStack{
-                    Text("PASS")
+                    Text(pass.title)
                         .font(.title)
                         .foregroundColor(.white)
                     
@@ -84,5 +84,5 @@ struct PassView: View {
 }
 
 #Preview {
-    PassView()
+    PassView(pass: Pass(id: 1, title: "BRUH", barcode: "hadsfdf"))
 }
